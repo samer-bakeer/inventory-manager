@@ -1,16 +1,46 @@
-# React + Vite
+# Grocery Inventory Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### A Lightweight, High-Performance React App for Cashier Efficiency
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)](https://react.dev)
+[![Vanilla CSS](https://img.shields.io/badge/CSS3-264DE4?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Challenge Summary
 
-## React Compiler
+A small grocery store struggles with inefficient inventory lookup — cashiers waste time scrolling through long product names like _“Gluten-Free Whole Grain Multigrain Bread”_.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This app solves it by providing:
 
-## Expanding the ESLint configuration
+- Real-time text search (case-insensitive, substring match)
+- Category filtering (Grocery, Bakery, Beverages, Dairy)
+- Combined filters (search + category work together instantly)
+- Graceful handling of long names (ellipsis + tooltip on hover)
+- Dynamic results counter & empty-state feedback
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+No submit button. No typos handling. Just speed and clarity.
+
+## UI Highlights
+
+- **Search bar** with clear (×) button and focus-enhanced styling
+- **Category filters** as tactile, color-coded buttons (not dropdowns) — faster for mouse/touch
+- **Item cards** with left accent border colored by category
+- **Responsive grid** — works on desktops, tablets, and compact cashier screens
+- **Performance-aware**: `useMemo` prevents unnecessary re-renders during filtering
+
+Designed for fatigue reduction: minimal cognitive load, high scannability.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+
+### Installation & Run
+
+```bash
+git clone https://github.com/samer-bakeer/inventory-manager.git
+cd inventory-manager
+npm install
+npm run dev
+```
