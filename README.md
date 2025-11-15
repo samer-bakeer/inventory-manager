@@ -44,3 +44,24 @@ cd inventory-manager
 npm install
 npm run dev
 ```
+
+## Project Structure
+
+src/
+├── components/
+│ ├── SearchBar.jsx # Controlled input with real-time emit
+│ ├── CategoryFilter.jsx # Interactive category toggle (All/Grocery/etc.)
+│ └── ItemList.jsx # Renders filtered items or empty state
+├── App.jsx # Orchestrates state + filtering logic
+├── data.js # Sample inventory (id, name, category)
+├── App.css # Custom, modular CSS — no frameworks
+└── main.
+
+## Key Technical Decisions
+
+Why? | How
+No UI libraries | Ensures minimal bundle size and full control over UX — critical for legacy cashier hardware.
+Buttons over <select> | Faster interaction: one click vs. two (open + select). Tested with touch targets ≥ 44px.
+title attribute on names | Provides full product name on hover without truncation clutter.
+useMemo for filtering | Prevents O(n) re-filtering on every keystroke when list grows.
+CSS custom properties | Scalable theming (e.g.,--color-grocery) for future category additions
